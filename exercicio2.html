@@ -6,7 +6,19 @@
     <body>
         <script>
             function pares(x,y) {
-                
+                var numerosPares = "";
+    
+                for (let i = x; i <= y; i++) {
+                    if (i % 2 === 0){
+                        if (numerosPares.length === 0){
+                            numerosPares = i;
+                        }
+                        else{
+                            numerosPares = numerosPares + ", " + i;                            
+                        }
+                    } 
+                }                
+                return "Os números pares do intervalo são: " + numerosPares;
             }
             console.log(pares(32,321));
         </script>
