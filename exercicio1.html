@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 1</title>
+    </head>
+    <body>
+        <script>
+            function mostraEndereco(rua, numero, bairro, cidade, uf) {
+                var endereco = { 
+                    rua, 
+                    numero, 
+                    bairro, 
+                    cidade, 
+                    uf
+                };
+                return "O usuário mora em " + endereco.cidade + "/" + endereco.uf + 
+                       ", no bairro " + endereco.bairro + ", na " + endereco.rua + 
+                       ", " + endereco.numero + "." ; 
+            }    
+            console.log(mostraEndereco("Rua Clodomiro Franco A Junior", 463, "Jardim Leonor", "Campinas", "SP"));
+        </script>
+    </body>
+</html>
