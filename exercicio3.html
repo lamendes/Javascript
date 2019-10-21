@@ -5,9 +5,25 @@
     </head>
     <body>
         <Script>
-            function temHabilidade(skills) {
-                
+            function temHabilidade(skill) {
+                var skills = ["Javascript", "NodeJS", "ReactJS", "React Native"], habilidades = ""; 
+
+                if (skills.indexOf(skill) > -1) {
+                    return "O programador possui habilidade em " + skill + ".";
+                }
+                else{
+                    for (let i = 0; i < skills.length; i++) {
+                        if (habilidades.length === 0) {
+                            habilidades = skills[i];
+                        }
+                        else {
+                            habilidades = habilidades  + ", " + skills[i];
+                        }                        
+                    }
+                    return "O programador não possui habilidade em " + skill + ", porem possui habilidades em " + habilidades + ".";
+                }
             }
+            console.log(temHabilidade("Delphi"));
         </Script>
     </body>
 </html>
