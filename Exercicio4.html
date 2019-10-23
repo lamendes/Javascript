@@ -5,7 +5,22 @@
     </head>
     <body>
         <script>
-            
+            function experiencia(anos) {
+                if (anos <= 1) {
+                    return "iniciante.";
+                } else 
+                if (anos >= 2 && anos <= 3) {
+                    return "intermediário."; 
+                }
+                else 
+                if (anos >= 3 && anos <= 6) {
+                    return "avançado.";    
+                }else 
+                if (anos >= 7) {
+                    return "jedi master.";    
+                }                   
+            }
+            console.log("O programador é " + experiencia(7));
         </script>
     </body>
 </html>
