@@ -16,10 +16,13 @@
                 }
             ];
             function temHabilidades(dados) {
-                for (let i = 0; i <= dados.length; i++) {
-                    return "O " + dados[i].nome + " possui as habilidades: " +
-                           dados[i].habilidades.join(", "); 
-                }
+                var ret = [], i = 0;
+                for (let dado of dados) {
+                    ret[i] = "O " + dado.nome + " possui as habilidades: " +
+                            dado.habilidades.join(", ") + "."; 
+                    i++;
+                }   
+                return ret;           
             };
             console.log(temHabilidades(usuarios));
         </script>
