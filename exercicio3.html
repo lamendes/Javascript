@@ -6,21 +6,23 @@
     <body>
         <Script>
             function temHabilidade(skill) {
-                var skills = ["Javascript", "NodeJS", "ReactJS", "React Native"], habilidades = ""; 
+                var skills = ["Javascript", "NodeJS", "ReactJS", "React Native"];//, habilidades = ""; 
 
                 if (skills.indexOf(skill) > -1) {
                     return "O programador possui habilidade em " + skill + ".";
                 }
                 else{
-                    for (let i = 0; i < skills.length; i++) {
-                        if (habilidades.length === 0) {
-                            habilidades = skills[i];
-                        }
-                        else {
-                            habilidades = habilidades  + ", " + skills[i];
-                        }                        
-                    }
-                    return "O programador não possui habilidade em " + skill + ", porem possui habilidades em " + habilidades + ".";
+                    // for (let i = 0; i < skills.length; i++) {
+                    //     if (habilidades.length === 0) {
+                    //         habilidades = skills[i];
+                    //     }
+                    //     else {
+                    //         habilidades = habilidades  + ", " + skills[i];
+                    //     }                        
+                    // }
+                    // Em vez de fazer utilizar um FOR, utilizei o metodo Join do Array
+                    return "O programador não possui habilidade em " + skill + 
+                           ", porem possui habilidades em " + skills.join(", ") + ".";
                 }
             }
             console.log(temHabilidade("Delphi"));
