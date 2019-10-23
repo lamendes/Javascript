@@ -5,7 +5,24 @@
     </head>
     <body>
         <script>
-            
+            var usuarios = [
+                {
+                    nome: "Lucas",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Paulo",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+            function temHabilidades(dados) {
+                var retorno = "";
+                for (let i = 0; i < dados.length; i++) {
+                    return "O " + dados[i].nome + " possui as habilidades: " +
+                           dados[i].habilidades.join(", "); 
+                }
+            };
+            console.log(temHabilidades(usuarios));
         </script>
     </body>
 </html>
